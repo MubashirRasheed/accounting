@@ -24,7 +24,7 @@ function setAuthLoginCookies(data) {
 export const useAuthLogin = (props) => {
   const apiRequest = useApiRequest();
 
-  return useMutation((values) => apiRequest.post('auth/login', values), {
+  return useMutation((values) => apiRequest.post('auth/user/login', values), {
     select: (res) => res.data,
     onSuccess: (data) => {
       // Set authentication cookies.
